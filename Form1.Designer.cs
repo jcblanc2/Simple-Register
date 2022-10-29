@@ -230,7 +230,7 @@ namespace Etudiants
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 26);
             this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Enregistrer";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -240,7 +240,7 @@ namespace Etudiants
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(87, 26);
             this.btnClear.TabIndex = 10;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Annuler";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -281,7 +281,7 @@ namespace Etudiants
             this.Controls.Add(this.txtBoxNom);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmEtudiants";
-            this.Text = "UEspoir";
+            this.Text = "frmEtudiant";
             this.Load += new System.EventHandler(this.frmEtudiants_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

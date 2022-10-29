@@ -5,18 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// 
+/// Cours: C#
+/// Name: John Clayton Blanc
+/// Date: 30 sep 2022
+/// Universite Espoir
 /// </summary>
 namespace Etudiants
 {
     class Personne
     {
         // Declaration of all variables
-        string _nom, _prenom1, _prenom2, _nationalite, _adresseRue, _ville, _pays, _telephone, _dateCree;
+        string _nom, _prenom1, _prenom2, _nationalite, _adresseRue, _ville, _pays, _telephone;
+        string _dateCree;
         int _age;
+        public static string currentDate = DateTime.Now.ToString("d");
 
 
-        // Costructor with some atributs
+        // Costructor with some attributes
         public Personne(string Nom, string Prenom1, string Prenom2, int Age)
         {
             this.Nom = Nom;
@@ -27,8 +32,8 @@ namespace Etudiants
         }
        
 
-        // Contructor with all atributs
-        public Personne(string Nom, string Prenom1, string Prenom2, int Age, string Nationalite, string AdresseRue, string Ville, string Pays, string Telephone)
+        // Contructor with all attributes
+        public Personne(string Nom, string Prenom1, string Prenom2, int Age, string Nationalite, string AdresseRue, string Ville, string Pays, string Telephone, string DateCree)
         {
             this.Nom = Nom;
             this.Prenom1 = Prenom1;
@@ -39,7 +44,7 @@ namespace Etudiants
             this.Ville = Ville;
             this.Pays = Pays;
             this.Telephone = Telephone;
-            //this.DateCree = DateCree;
+            this.DateCree = DateCree;
         }
 
         
@@ -68,7 +73,17 @@ namespace Etudiants
 
         public string Prenom2
         {
-            get => _prenom2;
+            get
+            {
+                if(_prenom2 == string.Empty)
+                {
+                    return "";
+                }
+                else
+                {
+                    return _prenom2;
+                }
+            }
 
             set
             {
@@ -130,9 +145,7 @@ namespace Etudiants
             set
             {
                 // Get the current date
-                DateTime now = DateTime.Now;
-                string FormatsOfDate = String.Format("{0}/{1}/{2}", now.Day, now.Month, now.Year);
-                _dateCree = FormatsOfDate;
+                _dateCree = currentDate;
             }
         }
 
@@ -145,7 +158,7 @@ namespace Etudiants
         override
         public string ToString()
         {
-            return _prenom1 + " " + _prenom2 + " " + _nom;
+            return Prenom1 + " " + Prenom2 + " " + Nom;
         }
 
 
@@ -156,6 +169,11 @@ namespace Etudiants
         /// <returns></returns>
         public string Capitalize(string text)
         {
+            if (text == string.Empty)
+            {
+                return "";
+            }
+
             string result = "";
             string[] words = text.Split(' ');
 
